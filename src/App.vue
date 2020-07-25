@@ -2,18 +2,26 @@
 	<div id="app">
 		<NavBar />
 		<Header />
+		<main>
+			<SaccoBenefits />
+			<CallToAction />
+		</main>
 	</div>
 </template>
 
 <script>
 import NavBar from './components/NavBar.vue';
 import Header from './components/Header.vue';
+import SaccoBenefits from './components/SaccoBenefits.vue';
+import CallToAction from './components/CallToAction.vue';
 
 export default {
 	name: 'App',
 	components: {
 		NavBar,
 		Header,
+		SaccoBenefits,
+		CallToAction,
 	},
 };
 </script>
@@ -28,6 +36,8 @@ body {
 	font-family: 'Brown', sans-serif;
 	margin: 0;
 	overflow-x: hidden;
+	background-color: #faf0f0;
+	height: 664px;
 }
 
 /* adjust width */
@@ -69,6 +79,15 @@ body::-webkit-scrollbar-thumb {
 	text-align: center;
 	color: #202c2c;
 	max-width: 100%;
-	width: 1200px;
+	width: 1280px;
+	margin: 0 auto;
+}
+
+main {
+	background-color: #fff;
+	border-radius: 0.5rem;
+	z-index: 999;
+	margin-bottom: 3rem;
+	padding-bottom: 4rem;
 }
 </style>

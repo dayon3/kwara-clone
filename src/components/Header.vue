@@ -41,16 +41,14 @@ export default {
 
 <style scoped>
 .container {
-	background-color: #faf0f0;
-	min-height: 664px;
-	min-width: 100vw;
+	width: inherit;
+	height: 600px;
 	padding-top: 100px;
 	display: flex;
 }
 header {
 	text-align: left;
 	display: flex;
-	width: 1200px;
 	min-width: 100%;
 	margin: 0 50px;
 }
@@ -64,6 +62,7 @@ p {
 	font-size: 1.4rem;
 	margin-bottom: 1.5rem;
 	margin-top: 0;
+	/* TODO: refactor */
 	color: rgba(32, 44, 44, 0.7);
 }
 .clients {
@@ -73,6 +72,6 @@ p {
 	padding: 1rem 0 1.2rem;
 }
 .hero img {
-	height: 664px;
+	height: 600px;
 }
 </style>
