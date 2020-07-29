@@ -11,8 +11,8 @@
 				<div class="product-benefits">
 					<h3>Benefits for SACCOs</h3>
 					<p>
-						Take your SACCO to the next level. Achieve your<br />
-						ICT strategy and easily go digital.
+						Take your SACCO to the next level. Achieve your ICT strategy and
+						easily go digital.
 					</p>
 					<Benefit />
 					<button class="btn">More about kwara for SACCOs</button>
@@ -37,9 +37,8 @@
 				<div class="product-benefits">
 					<h3>Benefits for Members</h3>
 					<p>
-						Benefit from clarity on your financial status, to <br />
-						understand how your SACCO is growing your <br />
-						wealth.
+						Benefit from clarity on your financial status, to understand how
+						your SACCO is growing your wealth.
 					</p>
 					<Benefit />
 					<button class="btn">More about kwara for Members</button>
@@ -83,10 +82,15 @@ p {
 }
 .product {
 	display: flex;
+	flex-wrap: wrap;
+}
+
+.product:nth-of-type(1) {
+	flex-direction: column-reverse;
 }
 
 .product > div {
-	width: 50%;
+	width: 100%;
 	padding: 1rem;
 }
 
@@ -99,10 +103,28 @@ p {
 }
 
 .product-img {
-	flex-basis: 50%;
+	flex-basis: 100%;
 }
 
 .product-img img {
 	width: 100%;
+}
+
+@media only screen and (min-width: 1024px) {
+	.product {
+		flex-wrap: initial;
+	}
+
+	.product:nth-of-type(1) {
+		flex-direction: initial;
+	}
+
+	.product > div {
+		width: 50%;
+	}
+
+	.product-img {
+		flex-basis: 50%;
+	}
 }
 </style>

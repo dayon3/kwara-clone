@@ -1,5 +1,5 @@
 <template>
-	<div class="navbar-wrapper">
+	<div>
 		<nav class="nav">
 			<div class="nav-logo">
 				<img src="../assets/kwara.svg" alt="kwara logo" />
@@ -14,8 +14,10 @@
 					<li><a href="#">About</a></li>
 					<li><a href="#">Blog</a></li>
 					<li><a href="#">Sign in</a></li>
+					<li>
+						<button class="btn">Sign Up</button>
+					</li>
 				</ul>
-				<button class="btn">Sign Up</button>
 			</div>
 		</nav>
 	</div>
@@ -29,39 +31,59 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.navbar-wrapper {
+.nav {
 	position: fixed;
 	top: 20px;
-	left: 0;
-	right: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 10;
+	max-width: calc(100% - 40px + 8px);
+	width: 1280px;
+	height: 68px;
 	background: rgba(255, 255, 255, 0.9);
+	backdrop-filter: blur(4px);
 	border: 1px solid rgba(0, 0, 0, 0.08);
 	border-radius: 8px;
 	box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.04);
-	margin: 0 30px;
-}
-.nav {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 8px 18px;
+	padding: 0px 20px;
 }
 .nav-links {
-	display: flex;
 	align-items: center;
+	display: none;
 }
 ul {
 	list-style-type: none;
-	padding: 0;
-	margin-right: 20px;
+	padding: 0px;
 }
 li {
 	display: inline-block;
-	margin: 0 16px;
+	margin: 0px 16px;
+}
+li:last-child {
+	margin: 0px;
 }
 a {
 	color: #202c2c;
 	text-decoration: none;
 	font-size: 0.95rem;
+}
+
+@media only screen and (min-width: 1280px) {
+	.nav {
+		max-width: calc(1280px);
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	.nav {
+		max-width: calc(100% - 50px);
+	}
+
+	.nav-links {
+		display: flex;
+	}
 }
 </style>

@@ -3,8 +3,9 @@
 		<NavBar />
 		<Header />
 		<main>
-			<SaccoBenefits />
+			<Benefits />
 			<CallToAction />
+			<UniqueSellingProposition />
 		</main>
 	</div>
 </template>
@@ -12,16 +13,18 @@
 <script>
 import NavBar from './components/NavBar.vue';
 import Header from './components/Header.vue';
-import SaccoBenefits from './components/SaccoBenefits.vue';
+import Benefits from './components/Benefits.vue';
 import CallToAction from './components/CallToAction.vue';
+import UniqueSellingProposition from './components/UniqueSellingProposition.vue';
 
 export default {
 	name: 'App',
 	components: {
 		NavBar,
 		Header,
-		SaccoBenefits,
+		Benefits,
 		CallToAction,
+		UniqueSellingProposition,
 	},
 };
 </script>
@@ -36,23 +39,26 @@ body {
 	font-family: 'Brown', sans-serif;
 	margin: 0;
 	overflow-x: hidden;
+	/* overscroll-behavior: none; */
 	background-color: #faf0f0;
 	height: 664px;
 }
 
 /* adjust width */
 body::-webkit-scrollbar {
-	width: 6px;
+	width: 5px;
 }
 
 /* change track background */
 body::-webkit-scrollbar-track {
 	background: #202c2c;
+	border-radius: 10rem;
 }
 
 /* change thumb background */
 body::-webkit-scrollbar-thumb {
 	background: #3a68c0;
+	border-radius: 10rem;
 }
 
 .btn {
@@ -78,15 +84,14 @@ body::-webkit-scrollbar-thumb {
 	-moz-osx-font-smoothing: grayscale;
 	text-align: center;
 	color: #202c2c;
-	max-width: 100%;
-	width: 1280px;
+	max-width: 1200px;
 	margin: 0 auto;
+	overflow-x: hidden;
 }
 
 main {
 	background-color: #fff;
 	border-radius: 0.5rem;
-	z-index: 999;
 	margin-bottom: 3rem;
 	padding-bottom: 4rem;
 }

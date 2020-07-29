@@ -26,6 +26,16 @@ export default {
 				{ message: 'Reduce your reliance on vendors' },
 				{ message: 'Benefit from a SACCO-specific platform' },
 			],
+			memberBenefits: [
+				{ message: 'Less cost for your SACCO means higher dividend for you' },
+				{ message: 'Faster loan processing with less paperwork required' },
+				{ message: "Easily know how much you've saved and how much you owe" },
+				{ message: 'Quickly register for a SACCO online from anywhere' },
+				{
+					message:
+						'Build your credit score you can borrow more. Goodbye shylocks',
+				},
+			],
 		};
 	},
 };

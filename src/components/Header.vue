@@ -41,7 +41,7 @@ export default {
 
 <style scoped>
 .container {
-	width: inherit;
+	width: 100%;
 	height: 600px;
 	padding-top: 100px;
 	display: flex;
@@ -50,7 +50,8 @@ header {
 	text-align: left;
 	display: flex;
 	min-width: 100%;
-	margin: 0 50px;
+	margin: 0px auto;
+	padding: 0px 2rem;
 }
 h1 {
 	font-size: 48px;
@@ -72,6 +73,16 @@ p {
 	padding: 1rem 0 1.2rem;
 }
 .hero img {
-	height: 600px;
+	display: none;
+}
+
+@media only screen and (min-width: 1024px) {
+	header {
+		padding: 0px;
+	}
+	.hero img {
+		display: block;
+		height: 600px;
+	}
 }
 </style>
